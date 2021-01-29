@@ -3,9 +3,8 @@ class CategoriesController < ApplicationController
 
   # GET /categories
   def index
-    @categories = Category.all
-
-    render json: @categories
+    @book_category = Book.find(params[:book_id]).category
+    render json: @book_category
   end
 
   # GET /categories/1

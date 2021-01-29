@@ -10,7 +10,7 @@ class BooksController < ApplicationController
   end
   
   def show
-    render json: @book, include: :author
+    render json: @book
   end
 
    # POST / a Book
