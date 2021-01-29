@@ -15,3 +15,7 @@ export const postBook = async (bookData) => {
   return resp.data;
 }
 
+export const deleteBook = async (id) => {
+  const resp = await api.delete(`/books/${id}`);
+  return resp;
+}
