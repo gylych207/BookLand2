@@ -5,3 +5,8 @@ export const getAllBooks = async () => {
   return resp.data;
 }
 
+export const getOneBook = async (id) => {
+  const resp = await api.get(`/books/${id}`);
+  return resp.data;
+}
+
