@@ -5,7 +5,3 @@ export const getAllBooks = async () => {
   return resp.data;
 }
 
-export const postBook = async (foodData) => {
-  const resp = await api.post('/foods', { food: foodData });
-  return resp.data;
-}
