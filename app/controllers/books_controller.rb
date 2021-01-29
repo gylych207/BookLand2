@@ -15,8 +15,12 @@ class BooksController < ApplicationController
 
    # POST / a Book
    def create
-    @book = Book.new(book_params)
-    @book.user = @current_user
+    @book = Book.create(book_params)
+    puts "BOOK #{@book}"
+    puts "currentUser #{@current_user}"
+    puts "BOOKUSERS #{@book.users}"
+    # @book.users = @current_user
+    @book.users.push(@current_user)
 
     if @book.save
       render json: @book, status: :created, location: @book
@@ -49,6 +53,6 @@ class BooksController < ApplicationController
   end
 
   def book_params
-    params.require(:book).permit(:title,:category,:condition,:isbn,:image_url,:price)
+    params.require(:book).permit(:title,:condition,:isbn,:image_url,:price,:category_id,:author_name)
   end
 end
