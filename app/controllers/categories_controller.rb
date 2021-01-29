@@ -12,6 +12,12 @@ class CategoriesController < ApplicationController
     render json: @category
   end
 
+  # GET /allCategories
+  def allCategories
+    @categories = Category.all
+    render json:@categories
+  end
+
   # POST /categories
   def create
     @category = Category.new(category_params)
