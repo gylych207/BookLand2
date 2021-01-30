@@ -19,7 +19,13 @@ export default function MainContainer(props) {
     }
     fetchBooks();
   }, []);
-  
+
+  const handleCreate = async (bookData) => {
+    const newBook = await postBook(bookData);
+    setBooks(prevState => [...prevState, newBook])
+    history.push('/books')
+  }
+
   return (<>
     
   </>)
