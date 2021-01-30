@@ -16,7 +16,13 @@ function App() {
       setCurrentUser(userData)
     }
     handleVerify();
-  },[])
+  }, [])
+  
+  const handleLogin = async(loginData) => { 
+    const userData = await loginUser(loginData);
+    setCurrentUser(userData);
+    history.push('/');
+  }
 
   return (
     <div>
