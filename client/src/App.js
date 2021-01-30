@@ -24,6 +24,13 @@ function App() {
     history.push('/');
   }
 
+  const handleRegister = async(registerData) => {
+    const userData = await registerUser(registerData);
+    setCurrentUser(userData);
+    history.push('/');
+
+  }
+
   return (
     <div>
     </div>
