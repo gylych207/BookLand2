@@ -38,7 +38,23 @@ function App() {
 
   return (
     <Layout currentUser={currentUser} handleLogout={handleLogout}>
-      
+      <Switch>
+        <Route path='/login'>
+          <Login 
+            handleLogin={handleLogin}
+          />
+        </Route>
+        <Route path='/register'>
+          <Register 
+            handleRegister={handleRegister}
+          />
+        </Route>
+        <Route path ='/'>
+          <MainContainer
+            currentUser = {currentUser}
+          />
+        </Route>
+      </Switch>
 
     </Layout>
   );
