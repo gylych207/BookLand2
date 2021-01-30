@@ -7,8 +7,19 @@ import SellYourBook from "../screens/SellYourBook.jsx";
 import { getAllCategories, getOneCategory } from "../services/categories.js";
 import {getAllBooks, getOneBook, postBook, deleteBook, putBook} from "../services/books.js"
 
-export default function MainContainer() {
+export default function MainContainer(props) {
+  const [books, setBooks] = useState([]);
+  const history = useHistory();
+  const { currentUser } = props;
 
+  useEffect(() => {
+    const fetchBooks = async () => {
+      const bookData = await getAllBooks();
+      setBooks(bookData)
+    }
+    fetchBooks();
+  }, []);
+  
   return (<>
     
   </>)
