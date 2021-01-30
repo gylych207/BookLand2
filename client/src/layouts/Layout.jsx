@@ -5,7 +5,6 @@ export default function Layout(props) {
   return (
     <div>
       <header>
-        <h1>Tasteville</h1>
         {currentUser ? (
           <>
             <p>{currentUser.username}</p>
@@ -15,7 +14,7 @@ export default function Layout(props) {
           <Link to='/login'>Login</Link>
         )}
       </header>
-      <hr />
+  
       {currentUser && (
         <>
           <Link to='/bookInfo'>Books</Link>

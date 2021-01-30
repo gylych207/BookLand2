@@ -49,11 +49,11 @@ function App() {
             handleRegister={handleRegister}
           />
         </Route>
-        <Route path ='/'>
+       
           <MainContainer
             currentUser = {currentUser}
           />
-        </Route>
+      
       </Switch>
 
     </Layout>
