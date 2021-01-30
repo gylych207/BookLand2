@@ -48,6 +48,11 @@ export default function MainContainer(props) {
           books={books}
         />
       </Route>
+      <Route path='/sellYourBook'>
+        <SellYourBook
+          handleCreate={handleCreate}
+        />
+      </Route>
       <Route path='/'>
         <Landing
           

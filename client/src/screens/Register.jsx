@@ -2,11 +2,11 @@ import { useState } from 'react';
 
 export default function Register(props) {
   const [formData, setFormData] = useState({
-    username: '',
+    name: '',
     email: '',
     password: ''
   })
-  const { username, email, password } = formData;
+  const { name, email, password } = formData;
   const { handleRegister } = props;
 
   const handleChange = (e) => {
@@ -26,8 +26,8 @@ export default function Register(props) {
       <label>Username:
         <input
           type='text'
-          name='username'
-          value={username}
+          name='name'
+          value={name}
           onChange={handleChange}
         />
       </label>

@@ -1,7 +1,7 @@
 import React from 'react';
 import './style.css'
 
-const Landing = () => {
+export default function Landing(){
   return (
     <div className="landing-screen">
       <div className="hero-image">
@@ -11,4 +11,3 @@ const Landing = () => {
   );
 };
 
-export default Landing;

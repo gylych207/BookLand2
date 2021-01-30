@@ -18,6 +18,7 @@ export default function Layout(props) {
       {currentUser && (
         <>
           <Link to='/bookInfo'>Books</Link>
+          <Link to='/sellyourBook'>Books</Link>
      
         </>
       )}
