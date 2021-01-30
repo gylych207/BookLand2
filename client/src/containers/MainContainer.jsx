@@ -6,10 +6,12 @@ import BookInfo from "../screens/BookInfo.jsx";
 import Customize from "../screens/Customize.jsx";
 import SellYourBook from "../screens/SellYourBook.jsx";
 import { getAllCategories, getOneCategory } from "../services/categories.js";
-import {getAllBooks, getOneBook, postBook, deleteBook, putBook} from "../services/books.js"
+import { getAllBooks, getOneBook, postBook, deleteBook, putBook } from "../services/books.js";
+
 
 export default function MainContainer(props) {
   const [books, setBooks] = useState([]);
+  const [categories, setCategories] = useState([]);
   const history = useHistory();
   const { currentUser } = props;
   
@@ -20,7 +22,16 @@ export default function MainContainer(props) {
     }
     fetchBooks();
   }, []);
-  console.log('books are', books)
+
+    
+  useEffect(() => {
+    const fetchCategories = async () => {
+      const categoryData = await getAllCategories();
+      setCategories(categoryData)
+    }
+    fetchCategories();
+  }, []);
+  
   
   const handleCreate = async (bookData) => {
     const newBook = await postBook(bookData);
@@ -51,6 +62,7 @@ export default function MainContainer(props) {
       <Route path='/sellYourBook'>
         <SellYourBook
           handleCreate={handleCreate}
+          categories={categories}
         />
       </Route>
       <Route path='/'>

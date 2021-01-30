@@ -1,18 +1,24 @@
 import React, { useState } from 'react';
+import { useHistory } from "react-router-dom"
 
-export default function SellYourBook(props){
+
+export default function SellYourBook(props) {
+  const history = useHistory();
+  
   const [formData, setFormData] = useState({
     title: '',
     condition: '',
     isbn: '',
     image_url: '',
     price: '',
-    author_name:''
+    author_name:'',
+    category_id:'',
   })
   const {title, condition, isbn,image_url, price, author_name} = formData;
-  const {handleCreate} = props;
+  const {handleCreate,categories} = props;
 
   const handleChange = (e) => {
+    
     const { name, value } = e.target;
     setFormData(prevState => ({
       ...prevState,
@@ -24,6 +30,7 @@ export default function SellYourBook(props){
     <form onSubmit={(e) => {
       e.preventDefault();
       handleCreate(formData)
+     history.push('/catalog')
     }}>
       <h3>Your Book Info</h3>
       <label>Title:
@@ -74,7 +81,12 @@ export default function SellYourBook(props){
           onChange={handleChange}
         />
       </label>
-
+      <select defaultValue='hi' onChange={handleChange} name='category_id'>
+        <option disabled value='hi'>--select a category--</option>
+        {categories.map((category) => (
+          <option value={category.id} key={category.id} >{category.name}</option>
+        ))}
+      </select>
      
       <button>Submit</button>
     </form>
