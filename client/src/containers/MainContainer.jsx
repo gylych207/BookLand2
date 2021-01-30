@@ -31,6 +31,14 @@ export default function MainContainer(props) {
       return book.id !== id
     }))
   }
+  const handleUpdate = async (id, bookData) => {
+    const updatedBook = await putBook(id, bookData);
+    setBooks(prevState => prevState.map(book => {
+      return book.id === Number(id) ? updatedBook : book
+    }))
+    history.push('/books')
+  }
+
   return (<>
     
   </>)
