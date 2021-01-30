@@ -25,7 +25,12 @@ export default function MainContainer(props) {
     setBooks(prevState => [...prevState, newBook])
     history.push('/books')
   }
-
+  const handleDelete = async (id) => {
+    await deleteBook(id);
+    setBooks(prevState => prevState.filter(book => {
+      return book.id !== id
+    }))
+  }
   return (<>
     
   </>)
