@@ -1,11 +1,12 @@
+import { Link } from "react-router-dom";
 
 
-const Layout = () => {
+export default function Layout(props) {
+ 
   return (
-    <Layout>
-
-    </Layout>
+    <div>
+      
+   </div>
   );
 };
 
-export default Layout;
