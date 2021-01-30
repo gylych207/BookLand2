@@ -28,12 +28,19 @@ function App() {
     const userData = await registerUser(registerData);
     setCurrentUser(userData);
     history.push('/');
+  }
 
+  const handleLogout = async() => {
+    setCurrentUser(null);
+    localStorage.removeItem('authToken');
+    removeToken();
   }
 
   return (
-    <div>
-    </div>
+    <Layout currentUser={currentUser} handleLogout={handleLogout}>
+      
+
+    </Layout>
   );
 }
 
