@@ -65,7 +65,8 @@ export default function MainContainer(props) {
           categories={categories}
         />
       </Route>
-      <Route path='/'>
+     
+      <Route exact path='/'>
         <Landing
           
         />

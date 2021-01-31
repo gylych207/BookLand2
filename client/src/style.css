@@ -1,0 +1,70 @@
+
+.layout-container{
+  background-image: url("https://i.imgur.com/7PIJ7qh.jpeg");
+  /* max-height: 1080px;
+  max-width: 1920px; */
+}
+a{
+  text-decoration: none;
+}
+.login, .catalog{
+  background-color: rgb(88,133,210);
+  color: white;
+  height: 30%;
+}
+
+header{
+  background-color:#19497D;
+  height: 124px;
+  display: flex;
+}
+.middle-container-landing{
+  background-image: url("https://i.imgur.com/8uXag5F.png");
+  margin-top:6%;
+
+}
+.middle-container-landing{
+  height: 623px;
+  width: 100vw;
+  display:flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.reader{
+  height: 598px;
+  width:641px;
+}
+.landing-screen{
+  /* background-image: url("https://i.imgur.com/7PIJ7qh.jpeg"); */
+  /* border: 1px solid red; */
+  height: 95vh;
+
+}
+.rent{
+  width:436px;
+  height: 93px;
+  background-color: white;
+  display: flex;
+  align-items: center;
+    justify-content: center;
+}
+.rent p {
+  font-family:georgia;
+  font-weight: bold;
+  font-size:24px;
+}
+.sell{
+  width:436px;
+  height: 93px;
+  background-color: white;
+  margin-left: 1%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+.sell p{
+  font-family:georgia;
+  font-weight: bold;
+  font-size:24px;
+}
