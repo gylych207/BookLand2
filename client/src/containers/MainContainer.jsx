@@ -65,7 +65,12 @@ export default function MainContainer(props) {
           categories={categories}
         />
       </Route>
-     
+      <Route path='/books/:id/edit'>
+        <Customize
+          books={books}
+          handleUpdate={handleUpdate}
+        />
+      </Route>
       <Route exact path='/'>
         <Landing
           
