@@ -49,7 +49,7 @@ export default function MainContainer(props) {
     setBooks(prevState => prevState.map(book => {
       return book.id === Number(id) ? updatedBook : book
     }))
-    history.push('/books')
+    history.push('/catalog')
   }
 
   return (
@@ -57,6 +57,8 @@ export default function MainContainer(props) {
         <Route path='/catalog'>
         <Catalog
           books={books}
+          handleDelete={handleDelete}
+          currentUser={currentUser}
         />
       </Route>
       <Route path='/sellYourBook'>
@@ -65,10 +67,16 @@ export default function MainContainer(props) {
           categories={categories}
         />
       </Route>
+      <Route path='/foods/:id'>
+        <BookInfo
+          books={books}
+        />
+      </Route>
       <Route path='/books/:id/edit'>
         <Customize
           books={books}
           handleUpdate={handleUpdate}
+          categories={categories}
         />
       </Route>
       <Route exact path='/'>

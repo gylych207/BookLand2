@@ -21,6 +21,6 @@ export const deleteBook = async (id) => {
 }
 
 export const putBook = async (id, bookData) => {
-  const resp = await api.put(`/books/${id}`, { food: bookData });
+  const resp = await api.put(`/books/${id}`, { book: bookData });
   return resp.data;
 }
