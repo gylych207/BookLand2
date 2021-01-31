@@ -9,8 +9,9 @@ class BooksController < ApplicationController
     render json: @books
   end
   
+    # GET / Show
   def show
-    render json: @book
+    render json: @book, include: :category
   end
 
    # POST / a Book

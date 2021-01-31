@@ -49,12 +49,12 @@ export default function MainContainer(props) {
     setBooks(prevState => prevState.map(book => {
       return book.id === Number(id) ? updatedBook : book
     }))
-    history.push('/catalog')
+    history.push('/books')
   }
 
   return (
     <Switch>
-        <Route path='/catalog'>
+        <Route exact path='/books'>
         <Catalog
           books={books}
           handleDelete={handleDelete}
@@ -67,7 +67,7 @@ export default function MainContainer(props) {
           categories={categories}
         />
       </Route>
-      <Route path='/foods/:id'>
+      <Route path='/books/:id'>
         <BookInfo
           books={books}
         />
