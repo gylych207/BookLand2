@@ -40,7 +40,7 @@ const Customize = (props) => {
     if (books.length) {
       prefillFormData()
     }
-  }, [books])
+  }, [books,id])
 
   const handleChange = (e) => {
     const { name, value } = e.target;
