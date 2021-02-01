@@ -68,7 +68,7 @@ export default function MainContainer(props) {
           categories={categories}
         />
       </Route>
-      <Route path='/books/:id'>
+      <Route exact path='/books/:id'>
         <BookInfo
           books={books}
           handleDelete={handleDelete}

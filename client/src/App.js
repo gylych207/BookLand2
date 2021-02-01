@@ -38,6 +38,7 @@ function App() {
 
   return (
     <Layout currentUser={currentUser} handleLogout={handleLogout}>
+      <div className="layout-container">
       <Switch>
         <Route path='/login'>
           <Login 
@@ -55,7 +56,7 @@ function App() {
           />
       
       </Switch>
-
+      </div>
     </Layout>
   );
 }

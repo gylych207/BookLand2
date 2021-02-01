@@ -1,6 +1,6 @@
 import React from 'react';
 import { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
+import { useParams,Link } from 'react-router-dom';
 import { getOneBook } from '../services/books';
 import { getOneCategory } from "../services/categories.js"
 
@@ -25,7 +25,7 @@ const BookInfo = (props) => {
       <div className='upper-container'>
         <div className='info-left-container'>
           <div className='book-div'> <img src={book?.image_url} alt='' className='book-info-image' />
-          <span className='customize'>Customize</span>
+          <Link to={`/books/${book?.id}/edit`}><span className='customize'>Customize</span></Link>
             <span className='delete' onClick={()=>handleDelete(book.id)}>Delete</span>
             </div>
         </div>

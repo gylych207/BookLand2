@@ -40,11 +40,13 @@ const Customize = (props) => {
   }
 
   return (
+    <div className='customize-screen'>
+      <div id='wrapper'>
     <form onSubmit={(e) => {
       e.preventDefault();
       handleUpdate(id,formData)
    
-    }}>
+    }} id='form'>
       <h3>Customize Your Book</h3>
       <label>Title:
         <input
@@ -101,8 +103,10 @@ const Customize = (props) => {
         ))}
       </select>
      
-      <button>Update</button>
-    </form>
+      <button id='update'>Update</button>
+        </form>
+        </div>
+      </div>
   );
 };
 

@@ -14,9 +14,9 @@ export default function Catalog(props) {
         {books.map(book => (
         <div key={book.id} className='book-name'>
           
-          <Link to={`/books/${book.id}`}>
-            <img src={book.image_url} alt='' className='book-img'/>
-            <p>{book.title}</p>
+          <Link to={`/books/${book?.id}`}>
+            <img src={book?.image_url} alt='' className='book-img'/>
+            <p>{book?.title}</p>
           </Link>
          
           {/* {currentUser?.id !== book.user_id && (
