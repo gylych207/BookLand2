@@ -1,4 +1,5 @@
 import React from 'react';
+import {Link} from "react-router-dom"
 import '../style.css';
 
 export default function Landing() {
@@ -6,7 +7,7 @@ export default function Landing() {
 		<div className="landing-screen">
 			<div className="middle-container-landing">
 				<div className="rent">
-					<p>Rent A Book</p>
+					<Link to='/books'><p>Rent A Book</p></Link>
 				</div>
 				<img
 					className="reader"

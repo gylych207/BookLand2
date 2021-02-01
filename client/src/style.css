@@ -1,8 +1,11 @@
 
 .layout-container{
   background-image: url("https://i.imgur.com/7PIJ7qh.jpeg");
-  /* max-height: 1080px;
-  max-width: 1920px; */
+  width: 100%;
+  height: auto;
+
+ /* max-height: 1080px; */
+  /* max-width: 1920px; */
 }
 a{
   text-decoration: none;
@@ -15,7 +18,7 @@ a{
 
 header{
   background-color:#19497D;
-  height: 124px;
+  height: 70px;
   display: flex;
 }
 .middle-container-landing{
@@ -67,4 +70,66 @@ header{
   font-family:georgia;
   font-weight: bold;
   font-size:24px;
+}
+
+.books-container{
+  height:100%;
+  display:flex;
+  flex-direction: row;
+}
+.book-img{
+  height:123px;
+  width:100px;
+}
+.grass-img{
+  height:110px;
+  width:478px;
+  align-self: flex-end;
+  margin-left: 30%;
+}
+.left-container{
+display:flex;
+}
+.left-container img{
+  height:259;
+  width:373px;
+  align-self: flex-end;
+  }
+
+.list-container{
+  display: flex;
+  width: 984px;
+  height: 778px;
+  flex-wrap: wrap;
+ 
+}
+.list-container > div {
+  margin:20px;  /* and that, will result in a 10px gap */
+}
+
+.right-container{
+display:flex;
+}
+.tree-image{
+  align-self: flex-end;
+}
+.search{
+  width: 60%;
+  height: 37px;
+  margin-left: 20%;
+  margin-top:3%;
+  margin-bottom:3%;
+  border: none;
+  opacity: 0.4;
+  color:#22333B;
+  font-size: 20px;
+  font-weight: bold;
+}
+.book-name{
+  height:123px;
+  width:100px;
+}
+.book-name p{
+color: white;
+font-weight: bold;
 }
