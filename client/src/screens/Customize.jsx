@@ -1,9 +1,21 @@
 import React from 'react';
 import { useState, useEffect } from 'react';
-import { useParams,useHistory } from 'react-router-dom';
+import { useParams, useHistory } from 'react-router-dom';
+import { getOneBook } from '../services/books';
 
 const Customize = (props) => {
+  const { id } = useParams();
   const history = useHistory()
+  const [book, setBook] = useState(null);
+
+  useEffect(() => {
+    const fetchBook = async () => {
+      const bookData = await getOneBook(id);
+      setBook(bookData);
+    }
+    fetchBook();
+  }, [id])
+
   const [formData, setFormData] = useState({
     title: '',
     condition: '',
@@ -15,7 +27,7 @@ const Customize = (props) => {
   })
   const { title, condition, isbn, image_url, price, author_name } = formData;
   const { books, categories, handleUpdate } = props;
-  const { id } = useParams();
+  
   
   useEffect(() => {
     const prefillFormData = () => {
@@ -41,13 +53,16 @@ const Customize = (props) => {
 
   return (
     <div className='customize-screen'>
+      <div className='update-image'>
+        <img src={book?.image_url} alt=''/>
+      </div>
       <div id='wrapper'>
     <form onSubmit={(e) => {
       e.preventDefault();
       handleUpdate(id,formData)
    
     }} id='form'>
-      <h3>Customize Your Book</h3>
+      <h3 >Customize Your Book</h3>
       <label>Title:
         <input
           name='title'
@@ -103,7 +118,7 @@ const Customize = (props) => {
         ))}
       </select>
      
-      <button id='update'>Update</button>
+      <input type="submit" value="Send" name="submit" id="submit" />
         </form>
         </div>
       </div>
