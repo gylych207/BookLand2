@@ -133,3 +133,161 @@ display:flex;
 color: white;
 font-weight: bold;
 }
+.book-info{
+display:flex;
+flex-direction: column;
+height: 100vh;
+}
+.upper-container{
+  border: 2px solid red;
+  height:555px;
+  width: auto;
+  display: flex;
+  flex-direction: row;
+}
+.book-info-image{
+  height:311px;
+  width:231px;
+}
+.book-div{
+  display: flex;
+  flex-direction: column;
+  margin-left: 5%;
+  border: 3px solid white;
+  width:231px;
+  margin-top:4%;
+}
+.customize{
+  display: flex;
+  font-size:30px;
+  margin-top:5px;
+  margin-left: 10%;
+  color: white;
+  height: 39px;
+  width: 180px;
+  background-color:#2DCC95;
+  border-radius: 20px;
+  align-items: center;
+  justify-content: center;
+}
+.delete{
+  display: flex;
+  font-size:30px;
+  margin-top:3px;
+  margin-left: 10%;
+  color: white;
+  height: 39px;
+  width: 180px;
+  background-color:#FC6681;
+  border-radius: 20px;
+  align-items: center;
+  justify-content: center;
+}
+.info-left-container{
+margin-left: 5%;
+align-self: center;
+}
+.info-middle-container{
+  border: 3px solid white;
+  width: 987px;
+  height: 555px;
+  margin-left: 3%;
+  display: flex;
+  flex-direction: column;
+}
+.info-right-container{
+  border: 3px solid white;
+  display: flex;
+  flex-direction: column;
+  margin-left: 3%;
+
+}
+.upper-inner-container{
+  text-align: center;
+  color: white;
+  font-size: 40px;
+  font-weight: bolder;
+}
+.lower-inner-container{
+  display: flex;
+  flex-direction: row;
+ 
+}
+.left-lower-inner-container{
+  color:white;
+  font-size:27px;
+  border: 3px solid red;
+  margin-left:10%;
+}
+.left-lower-inner-container span{
+  font-weight: bold;
+}
+.right-lower-inner-container{
+ border: 3px solid black;
+ margin-left: auto;
+order: 2;
+margin-right: 10%;
+display: flex;
+align-items: center;
+
+}
+.instock{
+  width:132px;
+  height:59px;
+  background-color:#2DCC95;
+  color:white;
+  font-weight: bolder;
+  font-size:24px;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10%;
+}
+.btn-rent{
+  background-color:#2DCC95;
+  width:132px;
+  height:59px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: bold;
+  border-radius: 10%;
+  font-size:24px;
+  margin-right:auto;
+  margin-left: auto;
+}
+.ad{
+  color:white;
+  font-weight:bolder;
+  font-size:24px;
+  margin-top: 25%;
+}
+.lower-container{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+.reviews{
+  display:flex;
+  flex-direction: row;
+  margin-top: 3%;
+  margin-left:3%;
+
+}
+.reviews img{
+  height: 43px;
+  width: 43px;
+}
+.photo img{
+  width: 380px;
+  height:275px;
+ 
+ 
+}
+.reviews input{
+  height: 40px;
+  width: 600px;
+  background-color:#D6B5B5;
+  font-size:24px;
+}

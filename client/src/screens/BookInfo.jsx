@@ -2,12 +2,13 @@ import React from 'react';
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { getOneBook } from '../services/books';
-import {getOneCategory} from "../services/categories.js"
+import { getOneCategory } from "../services/categories.js"
+
 
 const BookInfo = (props) => {
   const [book, setBook] = useState(null);
-  const [category, setCategory] = useState(null);
   const { id } = useParams();
+  const { handleDelete } = props;
 
   useEffect(() => {
     const fetchBook = async () => {
@@ -17,20 +18,53 @@ const BookInfo = (props) => {
     fetchBook();
   }, [id])
 
-  useEffect(() => {
-    const fetchCat = async () => {
-      const catData = await getOneCategory(id);
-      setCategory(catData);
-    }
-    fetchCat();
-  }, [id])
-
  
 
   return (
-    <div>
-      <h3>{book?.title}</h3>
-      <h3>{book?.category.name}</h3>
+    <div className='book-info'>
+      <div className='upper-container'>
+        <div className='info-left-container'>
+          <div className='book-div'> <img src={book?.image_url} alt='' className='book-info-image' />
+          <span className='customize'>Customize</span>
+            <span className='delete' onClick={()=>handleDelete(book.id)}>Delete</span>
+            </div>
+        </div>
+        <div className='info-middle-container'>
+          <div className='upper-inner-container'><p>{book?.title}</p></div>
+          <div className='lower-inner-container'>
+            <div className='left-lower-inner-container'>
+              <p><span>Condition:</span> {book?.condition}</p>
+              <p><span>ISBN: </span>{book?.isbn}</p>
+              <p><span>Rental Price: </span> {book?.price}$</p>
+              <p><span>Author: </span>{book?.author_name}</p>
+              <p><span>Category: </span>{book?.category.name}</p>
+             
+            </div>
+            <div className='right-lower-inner-container'>
+              <div className='instock'><p>In stock</p></div>
+            </div>
+          </div>
+  
+        </div>
+        <div className='info-right-container'>
+          <div className='ad'>
+            <p>Free 2 Day Shipping</p>
+            <p>Arrive 01.05.2021</p>
+          </div>
+          <div className='btn-rent'>
+            <p>RENT</p>
+          </div>
+        </div>
+      </div>
+      <div className='lower-container'>
+        <div className='reviews'>
+          <input type='textarea' />
+          <img src='https://i.imgur.com/opaqxyG.png' alt=''/>
+        </div>
+        <div className='photo'>
+          <img src='https://i.imgur.com/t0UsMu4.png' alt=''/>
+        </div>
+      </div>
     </div>
   );
 };

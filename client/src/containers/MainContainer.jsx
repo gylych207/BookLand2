@@ -43,6 +43,7 @@ export default function MainContainer(props) {
     setBooks(prevState => prevState.filter(book => {
       return book.id !== id
     }))
+    history.push('/books')
   }
   const handleUpdate = async (id, bookData) => {
     const updatedBook = await putBook(id, bookData);
@@ -70,6 +71,7 @@ export default function MainContainer(props) {
       <Route path='/books/:id'>
         <BookInfo
           books={books}
+          handleDelete={handleDelete}
         />
       </Route>
       <Route path='/books/:id/edit'>
