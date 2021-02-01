@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 export default function Catalog(props) {
-  const { books, handleDelete, currentUser } = props;
+  const { books} = props;
   return (
     <div className='books-container'>
       <div className="left-container">

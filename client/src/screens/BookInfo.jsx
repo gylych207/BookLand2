@@ -2,7 +2,7 @@ import React from 'react';
 import { useEffect, useState } from 'react';
 import { useParams,Link } from 'react-router-dom';
 import { getOneBook } from '../services/books';
-import { getOneCategory } from "../services/categories.js"
+
 
 
 const BookInfo = (props) => {

@@ -1,11 +1,10 @@
 import React from 'react';
 import { useState, useEffect } from 'react';
-import { useParams, useHistory } from 'react-router-dom';
+import { useParams,} from 'react-router-dom';
 import { getOneBook } from '../services/books';
 
 const Customize = (props) => {
   const { id } = useParams();
-  const history = useHistory()
   const [book, setBook] = useState(null);
 
   useEffect(() => {
