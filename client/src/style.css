@@ -1,7 +1,7 @@
 
 .layout-container{
   background-image: url("https://i.imgur.com/7PIJ7qh.jpeg");
-  width: auto;
+  width: 100vw;
   height: 100%;
   background-position: center;
   background-repeat: no-repeat;
@@ -31,6 +31,10 @@ header{
   justify-content: space-between;
   align-items: center;
   
+}
+.header-container{
+  max-width: 100%;
+  overflow: hidden;
 }
 .name-logout{
   display: flex;
@@ -82,7 +86,7 @@ header .login ,.logout{
 }
 .reader{
   height: 598px;
-  width:641px;
+  max-width:641px;
 }
 .landing-screen{
   display: flex;
@@ -182,7 +186,6 @@ display:flex;
 .book-name p{
 color: white;
 font-weight: bold;
-margin: 0;
 }
 .book-title{
   text-align: center;
@@ -770,6 +773,7 @@ h2.active {
   }
   .middle-container-landing{
     height:auto;
+    max-width:100vw;
     flex-direction: column;
   }
   .sell{
