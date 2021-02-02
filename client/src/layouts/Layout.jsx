@@ -8,9 +8,11 @@ export default function Layout(props) {
       <header>
         {currentUser ? (
           <>
-            <p>{currentUser.username}</p>
+            <div className='name-logout'>
+              <p className='name'>Welcome {currentUser.name}</p>
             <Link to='/' ><span onClick={handleLogout} className='logout'>Logout</span></Link>
-            <Link to='/'><img src="https://i.imgur.com/DQFRxfk.png" alt='' id='logo'/></Link>
+            </div>
+            <Link to='/'><img src="https://i.imgur.com/DQFRxfk.png" alt='' id='logo' /></Link>
            
           </>
         ) : (

@@ -32,6 +32,38 @@ header{
   align-items: center;
   
 }
+.name-logout{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin-right: 3%;
+
+}
+.name{
+  color:white;
+  border: 3px solid white;
+  padding: 9px;
+  font-weight: bolder;
+  font-size: 18px;
+} 
+p.name{
+  margin-right: 13px;
+}
+.logout{
+  border:3px solid white;
+  padding: 9px;
+  font-weight: bolder;
+  font-size: 16px;
+}
+.login{
+  color:white;
+  border: 3px solid white;
+  padding: 9px;
+  font-weight: bolder;
+  font-size: 18px;
+  margin-right: 3%;
+}
 header .login ,.logout{
   color: white;
 }
@@ -716,4 +748,19 @@ h2.active {
 
 .signUp-screen{
   height: 100vh;
+}
+@media (max-width: 600px) {
+ .landing-screen{
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+ }
+  .reader{
+    height: 300px;
+    width: 313px;
+  }
+  .middle-container-landing{
+    height:auto;
+    flex-direction: column;
+  }
 }
