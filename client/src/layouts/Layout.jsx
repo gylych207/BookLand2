@@ -9,13 +9,13 @@ export default function Layout(props) {
         {currentUser ? (
           <>
             <p>{currentUser.username}</p>
-            <Link to='/' ><span onClick={handleLogout} id='logout'>Logout</span></Link>
+            <Link to='/' ><span onClick={handleLogout} className='logout'>Logout</span></Link>
             <Link to='/'><img src="https://i.imgur.com/DQFRxfk.png" alt='' id='logo'/></Link>
            
           </>
         ) : (
             <>
-              <Link to='/login' id="login"><span>Login</span></Link>
+              <Link to='/login' className="login"><span>Login</span></Link>
               <Link to='/'><img src="https://i.imgur.com/DQFRxfk.png" alt='' id='logo'/></Link>
            
             </>

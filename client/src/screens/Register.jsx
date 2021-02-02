@@ -18,39 +18,49 @@ export default function Register(props) {
   }
 
   return (
+    <div className='signUp-screen'>
+    <div className='wraper fadeInDown'>
+    <div className='formContent'>
+    <h2 className="active"> Sign Up</h2>
     <form onSubmit={(e)=> {
       e.preventDefault();
       handleRegister(formData);
     }}>
-      <h3>Register</h3>
+    
       <label>Username:
         <input
           type='text'
-          name='name'
+                name='name'
+                className='fadeIn second login tex'
           value={name}
           onChange={handleChange}
         />
       </label>
-      <br />
+    
       <label>Email:
         <input
           type='text'
-          name='email'
+                name='email'
+                className='fadeIn second login tex'
           value={email}
           onChange={handleChange}
         />
       </label>
-      <br />
+    
       <label>Password:
         <input
           type='password'
-          name='password'
+                name='password'
+                className='fadeIn third password tex'
           value={password}
           onChange={handleChange}
         />
       </label>
-      <br />
-      <button>Submit</button>
-    </form>
+   
+      <input type="submit" className="fadeIn fourth sub" />
+      </form>
+      </div>
+      </div>
+    </div>
   )
 }

@@ -22,7 +22,7 @@ export default function Login(props) {
   return (
     <div className='login-screen'>
     <div className='wraper fadeInDown'>
-      <div id='formContent'>
+      <div className='formContent'>
       <h2 className="active"> Sign In </h2>
 		<form
 			onSubmit={(e) => {
@@ -33,27 +33,25 @@ export default function Login(props) {
       <label>Username:
         <input
           type='text'
-          name='username'
-          id='login'
-          className="fadeIn second tex"
+              name='username'
+              className='fadeIn second login tex'
           value={username}
           onChange={handleChange}
         />
       </label>
-     
+      <br />
       <label>Password:
         <input
           type='password'
-          name='password'
-              id='password'
-              className='fadeIn third tex'
+              name='password'
+              className='fadeIn third password tex'
           value={password}
           onChange={handleChange}
         />
       </label>
-     
-      <Link to='/register'><h2 className="inactive underlineHover">Sign Up </h2></Link>
-      <input type="submit" className="fadeIn fourth sub"/>
+      <br />
+      <Link to='/register'> <h2 class="inactive underlineHover">Sign Up </h2></Link>
+      <input type="submit" class="fadeIn fourth sub" />
       </form>
       </div>
       </div>

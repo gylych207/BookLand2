@@ -32,7 +32,7 @@ header{
   align-items: center;
   
 }
-header #login ,#logout{
+header .login ,#logout{
   color: white;
 }
 .middle-container-landing{
@@ -337,7 +337,6 @@ box-sizing: border-box;
 label {
 	display: block;
 	font-size: 24px;
-	padding: 13px 0;
 	color: #fff;
 }
 .wrapper form input{
@@ -469,21 +468,7 @@ opacity: 0.8;
 https://codepen.io/danzawadzki/pen/EgqKRr?editors=1100
 */
 
-
-/* BASIC */
-
-html {
-  background-color: #56baed;
-}
-
-body {
-  font-family: "Poppins", sans-serif;
-  height: 100vh;
-}
-
-
-
-h2 {
+.active {
   text-align: center;
   font-size: 16px;
   font-weight: 600;
@@ -507,12 +492,12 @@ h2 {
   padding: 20px;
 }
 
-#formContent {
+.formContent {
   -webkit-border-radius: 10px 10px 10px 10px;
   border-radius: 10px 10px 10px 10px;
   background: #fff;
   padding: 30px;
-  width: 90%;
+  width:85%;
   max-width: 450px;
   position: relative;
   padding: 0px;
@@ -521,7 +506,7 @@ h2 {
   text-align: center;
 }
 
-#formFooter {
+.formFooter {
   background-color: #f6f6f6;
   border-top: 1px solid #dce8f1;
   padding: 25px;
@@ -561,7 +546,7 @@ h2.active {
   box-shadow: 0 10px 30px 0 rgba(95,186,233,0.4);
   -webkit-border-radius: 5px 5px 5px 5px;
   border-radius: 5px 5px 5px 5px;
-  margin: 5px 20px 40px 20px;
+  margin: 25px 20px 40px 20px;
   -webkit-transition: all 0.3s ease-in-out;
   -moz-transition: all 0.3s ease-in-out;
   -ms-transition: all 0.3s ease-in-out;
@@ -573,7 +558,7 @@ h2.active {
   background-color: #39ace7;
 }
 
-.subactive  {
+.sub:active  {
   -moz-transform: scale(0.95);
   -webkit-transform: scale(0.95);
   -o-transform: scale(0.95);
@@ -581,8 +566,8 @@ h2.active {
   transform: scale(0.95);
 }
 
-.tex{
-  background-color: #f6f6f6;
+.tex {
+  background-color: #E8F0FE;
   border: none;
   color: #0d0d0d;
   padding: 15px 32px;
@@ -590,8 +575,7 @@ h2.active {
   text-decoration: none;
   display: inline-block;
   font-size: 16px;
-  margin: 5px;
-  width: 85%;
+  width: 90%;
   border: 2px solid #f6f6f6;
   -webkit-transition: all 0.5s ease-in-out;
   -moz-transition: all 0.5s ease-in-out;
@@ -724,6 +708,11 @@ h2.active {
 } 
 
 
-*{
+
+* {
   box-sizing: border-box;
+}
+
+.signUp-screen{
+  height: 100vh;
 }
