@@ -26,7 +26,6 @@ header{
   background-color:#19497D;
   height: 10vh;
   display: flex;
-
    flex-direction: row-reverse;
   justify-content: space-between;
   align-items: center;
@@ -91,8 +90,9 @@ header .login ,.logout{
 
 }
 .rent{
-  width:436px;
+  width:336px;
   height: 93px;
+  border-radius:30px;
   background-color: white;
   display: flex;
   align-items: center;
@@ -104,8 +104,9 @@ header .login ,.logout{
   font-size:24px;
 }
 .sell{
-  width:436px;
+  width:336px;
   height: 93px;
+  border-radius: 30px;
   background-color: white;
   margin-left: 1%;
   display:flex;
@@ -185,7 +186,6 @@ flex-direction: column;
 height: 100vh;
 }
 .upper-container{
-  border: 2px solid red;
   height:555px;
   width: auto;
   display: flex;
@@ -199,7 +199,6 @@ height: 100vh;
   display: flex;
   flex-direction: column;
   margin-left: 5%;
-  border: 3px solid white;
   width:231px;
   margin-top:4%;
 }
@@ -234,8 +233,7 @@ margin-left: 5%;
 align-self: center;
 }
 .info-middle-container{
-  border: 3px solid white;
-  width: 987px;
+
   height: 555px;
   margin-left: 3%;
   display: flex;
@@ -248,7 +246,7 @@ align-self: center;
   height:100%;
 }
 .info-right-container{
-  border: 3px solid white;
+ 
   display: flex;
   flex-direction: column;
   margin-left: 3%;
@@ -268,17 +266,17 @@ align-self: center;
 .left-lower-inner-container{
   color:white;
   font-size:27px;
-  border: 3px solid red;
+ 
   margin-left:10%;
 }
 .left-lower-inner-container span{
   font-weight: bold;
 }
 .right-lower-inner-container{
- border: 3px solid black;
+
  margin-left: auto;
 order: 2;
-margin-right: 10%;
+margin-right: 40%;
 display: flex;
 align-items: center;
 
@@ -286,6 +284,7 @@ align-items: center;
 .instock{
   width:132px;
   height:59px;
+  margin-left: 45px;
   background-color:#2DCC95;
   color:white;
   font-weight: bolder;
@@ -334,7 +333,6 @@ align-items: center;
 .photo img{
   width: 380px;
   height:275px;
- 
  
 }
 .reviews input{
@@ -439,7 +437,7 @@ form h3{
   display: flex;
   flex-direction: column;
   color: white;
-  border:2px solid white;
+
   margin-left: 7%;
 
   
@@ -462,7 +460,7 @@ opacity: 0.8;
 .sell-middle-container{
   display: flex;
   flex-direction:column;
-  border: 2px solid gold;
+
   color:white;
 
 }
@@ -473,7 +471,7 @@ opacity: 0.8;
 .sell-right-container{
   display: flex;
   flex-direction:column;
-  border: 2px solid indianred;
+ 
   color:white;
 }
 .content3 p{
@@ -642,6 +640,7 @@ h2.active {
   animation-fill-mode: both;
 }
 
+
 @-webkit-keyframes fadeInDown {
   0% {
     opacity: 0;
@@ -749,6 +748,9 @@ h2.active {
 .signUp-screen{
   height: 100vh;
 }
+.card{
+  height:100vh;
+}
 @media (max-width: 600px) {
  .landing-screen{
   background-position: center;
@@ -763,4 +765,63 @@ h2.active {
     height:auto;
     flex-direction: column;
   }
+  .sell{
+    width:224px;
+    height:62px;
+  }
+  .rent{
+    width:224px;
+    height:62px;
+  }
+  .rent p{
+    font-size:20px;
+  }
+  .sell p{
+    font-size:20px;
+  }
+ #logo{
+   height:30px;
+ }
+ .name{
+   padding:6px;
+   font-size: 12px;
+ }
+ .logout{
+  padding:6px;
+  font-size: 12px;
+ }
+ .name-logout{
+   margin-right: 20%;
+   align-items: center;
+ }
+ .left-container img{
+   width:124px;
+   height:86px;
+ }
+ .grass-img{
+   height:73px;
+   width:70px;
+ }
+ .tree{
+  width:124px;
+  height:86px;
+ }
+ .book-img{
+   height:82px;
+   width:66px;
+ }
+.book-info-image{
+  height:207px;
+  width:160px;
+}
+.customize{
+  font-size:20px;
+  height:26px;
+  width:120px;
+}
+.delete{
+  font-size:20px;
+  height:26px;
+  width:120px;
+}
 }

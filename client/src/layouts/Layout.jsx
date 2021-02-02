@@ -4,7 +4,7 @@ import '../style.css';
 export default function Layout(props) {
   const { currentUser, handleLogout } = props;
   return (
-    <div>
+    <div className='header-container'>
       <header>
         {currentUser ? (
           <>

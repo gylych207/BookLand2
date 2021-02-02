@@ -5,12 +5,14 @@ import Landing from "../screens/Landing.jsx"
 import BookInfo from "../screens/BookInfo.jsx";
 import Customize from "../screens/Customize.jsx";
 import SellYourBook from "../screens/SellYourBook.jsx";
+import ShoppingCard from "../screens/ShoppingCard.jsx"
 import { getAllCategories} from "../services/categories.js";
 import { getAllBooks, postBook, deleteBook, putBook } from "../services/books.js";
 
 
 export default function MainContainer(props) {
   const [books, setBooks] = useState([]);
+  const [bookData,setBookData] = useState([]);
   const [categories, setCategories] = useState([]);
   const history = useHistory();
   const { currentUser } = props;
@@ -72,6 +74,7 @@ export default function MainContainer(props) {
         <BookInfo
           books={books}
           handleDelete={handleDelete}
+          setBookData={setBookData}
         />
       </Route>
       <Route path='/books/:id/edit'>
@@ -84,6 +87,11 @@ export default function MainContainer(props) {
       <Route path='/sellyourbook'>
         <SellYourBook
           handleCreate={handleCreate}
+        />
+      </Route>
+      <Route path='/shoppingCard'>
+        <ShoppingCard
+         bookData={bookData}
         />
       </Route>
       <Route exact path='/'>

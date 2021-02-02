@@ -9,6 +9,8 @@ const BookInfo = (props) => {
   const [book, setBook] = useState(null);
   const { id } = useParams();
   const { handleDelete } = props;
+  const { setBookData } = props;
+  
 
   useEffect(() => {
     const fetchBook = async () => {
@@ -52,7 +54,7 @@ const BookInfo = (props) => {
             <p>Arrive 01.05.2021</p>
           </div>
           <div className='btn-rent'>
-            <p>RENT</p>
+            <Link to='/shoppingCard' onClick={()=>setBookData(book)}><p>RENT</p></Link>
           </div>
         </div>
       </div>

@@ -1,9 +1,11 @@
 import React from 'react';
 
 const ShoppingCard = () => {
+  
+
   return (
-    <div>
-      
+    <div className='card'>
+     
     </div>
   );
 };
