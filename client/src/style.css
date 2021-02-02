@@ -19,6 +19,7 @@ a{
   color: white;
   height: 30%;
 }
+
 #logo{
  margin-left: 20%;
 }
@@ -175,10 +176,16 @@ display:flex;
 .book-name{
   height:123px;
   width:100px;
+  display: flex;
+  flex-direction: column;
 }
 .book-name p{
 color: white;
 font-weight: bold;
+margin: 0;
+}
+.book-title{
+  text-align: center;
 }
 .book-info{
 display:flex;

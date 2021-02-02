@@ -14,17 +14,11 @@ export default function Catalog(props) {
         {books.map(book => (
         <div key={book.id} className='book-name'>
           
-          <Link to={`/books/${book?.id}`}>
+          <Link to={`/books/${book?.id}`} id='link'>
             <img src={book?.image_url} alt='' className='book-img'/>
-            <p>{book?.title}</p>
+            <p className='book-title'>{book?.title}</p>
           </Link>
          
-          {/* {currentUser?.id !== book.user_id && (
-            <>
-              <Link to={`/books/${book.id}/edit`}><button>Edit</button></Link>
-              <button onClick={() => handleDelete(book.id)}>Delete</button>
-            </>
-          )} */}
         </div>
       ))}
         </div>
