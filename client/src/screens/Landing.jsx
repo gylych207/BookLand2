@@ -16,7 +16,7 @@ export default function Landing() {
 				/>
 
 				<div className="sell">
-					<p>Sell Your Book</p>
+					<Link to='/sellyourbook' ><p>Sell Your Book</p></Link>
 				</div>
 			</div>
 		</div>

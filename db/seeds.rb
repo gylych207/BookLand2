@@ -10,9 +10,14 @@ Book.destroy_all
 User.destroy_all
 Category.destroy_all
 
-@science = Category.create!(name:"science")
-@adventure = Category.create!(name:"adventure")
-@literature = Category.create!(name:"literature")
+@science = Category.create!(name:"Science")
+@adventure = Category.create!(name:"Adventure")
+@literature = Category.create!(name:"Literature")
+@business = Category.create!(name:"Business")
+@cooking = Category.create!(name:"Cooking")
+@sports = Category.create!(name:"Sooking")
+@socialSCiences = Category.create!(name:"Social Sciences")
+
 
 puts "#{Category.count} categories created"
 

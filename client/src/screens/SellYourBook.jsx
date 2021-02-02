@@ -27,10 +27,25 @@ export default function SellYourBook(props) {
   }
 
   return (
-    <form onSubmit={(e) => {
+    <div className='sell-screen'>
+      <div className='sell-left-container'>
+        <div className='content1'>
+          <h2>1. Fill out the form</h2>
+          <p>We will tell you how much we'll pay you</p>
+        </div>
+        <img src='https://i.imgur.com/8EzvAKw.png' alt='coinbase'/>
+      </div>
+      <div className='sell-middle-container'>
+        <divc className='content2'>
+          <h2> 2. Mail Your Books for Free</h2>
+          <p>Print a prepaid shipping label and tape it to the package</p>
+        </divc>
+        <div className='sell-form'>
+          <div className='wrapper'>
+        <form onSubmit={(e) => {
       e.preventDefault();
       handleCreate(formData)
-     history.push('/catalog')
+     history.push('/books')
     }}>
       <h3>Your Book Info</h3>
       <label>Title:
@@ -86,10 +101,26 @@ export default function SellYourBook(props) {
         {categories.map((category) => (
           <option value={category.id} key={category.id} >{category.name}</option>
         ))}
-      </select>
+              </select>
+              
      
-      <button>Submit</button>
-    </form>
+              <input type="submit" value="Send" name="submit" id="submit" />
+            </form>
+            </div>
+        </div>
+      </div>
+      <div className='sell-right-container'>
+      <div className='content3'>
+        <h2> 3. Get paid</h2>
+          <p>After we Inspect your book,we will Send your payment</p>
+        
+      </div>
+  
+          <img src='https://i.imgur.com/pzSPT2L.png' alt=''/>
+      </div>
+      
+
+      </div>
   )
 };
 

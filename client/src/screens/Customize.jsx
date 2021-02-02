@@ -55,7 +55,7 @@ const Customize = (props) => {
       <div className='update-image'>
         <img src={book?.image_url} alt=''/>
       </div>
-      <div id='wrapper'>
+      <div className='wrapper'>
     <form onSubmit={(e) => {
       e.preventDefault();
       handleUpdate(id,formData)
