@@ -32,6 +32,33 @@ puts "#{Category.count} categories created"
 @physicssss = Book.create!(title:"Physics",condition:"new",isbn:"678765",image_url:"https://images-na.ssl-images-amazon.com/images/I/512yEu6OOPL._SX346_BO1,204,203,200_.jpg",price:34,category:@literature,author_name:"Steph")
 @good_old_dayssss = Book.create!(title:"good old days",condition:"new",isbn:"678347",image_url:"https://images-na.ssl-images-amazon.com/images/I/41As-GUKFyL._AC_SY1000_.jpg",price:10,category:@adventure,author_name:"Mary")
 @MyBookkkk = Book.create!(title:"MyBOOK",condition:"new",isbn:"678347",image_url:"https://images-na.ssl-images-amazon.com/images/I/41As-GUKFyL._AC_SY1000_.jpg",price:10,category:@adventure,author_name:"Mary")
+
+
+@book1 = Book.create!(title:"Algebra",condition:"used",isbn:"12365837",image_url:"https://images-na.ssl-images-amazon.com/images/I/51iRx7fDT0L._SX384_BO1,204,203,200_.jpg",price:67,category:@science,author_name:"Arnold")
+@book2 = Book.create!(title:"Physics",condition:"new",isbn:"678765",image_url:"https://images-na.ssl-images-amazon.com/images/I/512yEu6OOPL._SX346_BO1,204,203,200_.jpg",price:34,category:@literature,author_name:"Steph")
+@book3 = Book.create!(title:"good old days",condition:"new",isbn:"678347",image_url:"https://images-na.ssl-images-amazon.com/images/I/41As-GUKFyL._AC_SY1000_.jpg",price:10,category:@adventure,author_name:"Mary")
+@book4 = Book.create!(title:"MyBOOK",condition:"new",isbn:"678347",image_url:"https://images-na.ssl-images-amazon.com/images/I/41As-GUKFyL._AC_SY1000_.jpg",price:10,category:@adventure,author_name:"Mary")
+@book5 = Book.create!(title:"Algebra",condition:"used",isbn:"12365837",image_url:"https://images-na.ssl-images-amazon.com/images/I/51iRx7fDT0L._SX384_BO1,204,203,200_.jpg",price:67,category:@science,author_name:"Arnold")
+@book6 = Book.create!(title:"Physics",condition:"new",isbn:"678765",image_url:"https://images-na.ssl-images-amazon.com/images/I/512yEu6OOPL._SX346_BO1,204,203,200_.jpg",price:34,category:@literature,author_name:"Steph")
+@book7 = Book.create!(title:"good old days",condition:"new",isbn:"678347",image_url:"https://images-na.ssl-images-amazon.com/images/I/41As-GUKFyL._AC_SY1000_.jpg",price:10,category:@adventure,author_name:"Mary")
+@book8 = Book.create!(title:"MyBOOK",condition:"new",isbn:"678347",image_url:"https://images-na.ssl-images-amazon.com/images/I/41As-GUKFyL._AC_SY1000_.jpg",price:10,category:@adventure,author_name:"Mary")
+@book9 = Book.create!(title:"Algebra",condition:"used",isbn:"12365837",image_url:"https://images-na.ssl-images-amazon.com/images/I/51iRx7fDT0L._SX384_BO1,204,203,200_.jpg",price:67,category:@science,author_name:"Arnold")
+@book10 = Book.create!(title:"Physics",condition:"new",isbn:"678765",image_url:"https://images-na.ssl-images-amazon.com/images/I/512yEu6OOPL._SX346_BO1,204,203,200_.jpg",price:34,category:@literature,author_name:"Steph")
+@book11 = Book.create!(title:"good old days",condition:"new",isbn:"678347",image_url:"https://images-na.ssl-images-amazon.com/images/I/41As-GUKFyL._AC_SY1000_.jpg",price:10,category:@adventure,author_name:"Mary")
+@book12 = Book.create!(title:"MyBOOK",condition:"new",isbn:"678347",image_url:"https://images-na.ssl-images-amazon.com/images/I/41As-GUKFyL._AC_SY1000_.jpg",price:10,category:@adventure,author_name:"Mary")
+@book13 = Book.create!(title:"Algebra",condition:"used",isbn:"12365837",image_url:"https://images-na.ssl-images-amazon.com/images/I/51iRx7fDT0L._SX384_BO1,204,203,200_.jpg",price:67,category:@science,author_name:"Arnold")
+@book14 = Book.create!(title:"Physics",condition:"new",isbn:"678765",image_url:"https://images-na.ssl-images-amazon.com/images/I/512yEu6OOPL._SX346_BO1,204,203,200_.jpg",price:34,category:@literature,author_name:"Steph")
+@book15 = Book.create!(title:"good old days",condition:"new",isbn:"678347",image_url:"https://images-na.ssl-images-amazon.com/images/I/41As-GUKFyL._AC_SY1000_.jpg",price:10,category:@adventure,author_name:"Mary")
+@book16 = Book.create!(title:"MyBOOK",condition:"new",isbn:"678347",image_url:"https://images-na.ssl-images-amazon.com/images/I/41As-GUKFyL._AC_SY1000_.jpg",price:10,category:@adventure,author_name:"Mary")
+
+@book11 = Book.create!(title:"Algebra",condition:"used",isbn:"12365837",image_url:"https://images-na.ssl-images-amazon.com/images/I/51iRx7fDT0L._SX384_BO1,204,203,200_.jpg",price:67,category:@science,author_name:"Arnold")
+@book22 = Book.create!(title:"Physics",condition:"new",isbn:"678765",image_url:"https://images-na.ssl-images-amazon.com/images/I/512yEu6OOPL._SX346_BO1,204,203,200_.jpg",price:34,category:@literature,author_name:"Steph")
+@book33 = Book.create!(title:"good old days",condition:"new",isbn:"678347",image_url:"https://images-na.ssl-images-amazon.com/images/I/41As-GUKFyL._AC_SY1000_.jpg",price:10,category:@adventure,author_name:"Mary")
+@book44 = Book.create!(title:"MyBOOK",condition:"new",isbn:"678347",image_url:"https://images-na.ssl-images-amazon.com/images/I/41As-GUKFyL._AC_SY1000_.jpg",price:10,category:@adventure,author_name:"Mary")
+@book55 = Book.create!(title:"Algebra",condition:"used",isbn:"12365837",image_url:"https://images-na.ssl-images-amazon.com/images/I/51iRx7fDT0L._SX384_BO1,204,203,200_.jpg",price:67,category:@science,author_name:"Arnold")
+@book66 = Book.create!(title:"Physics",condition:"new",isbn:"678765",image_url:"https://images-na.ssl-images-amazon.com/images/I/512yEu6OOPL._SX346_BO1,204,203,200_.jpg",price:34,category:@literature,author_name:"Steph")
+@book77 = Book.create!(title:"good old days",condition:"new",isbn:"678347",image_url:"https://images-na.ssl-images-amazon.com/images/I/41As-GUKFyL._AC_SY1000_.jpg",price:10,category:@adventure,author_name:"Mary")
+@book88 = Book.create!(title:"MyBOOK",condition:"new",isbn:"678347",image_url:"https://images-na.ssl-images-amazon.com/images/I/41As-GUKFyL._AC_SY1000_.jpg",price:10,category:@adventure,author_name:"Mary")
 puts "#{Book.count}  created"
 
 
