@@ -32,9 +32,10 @@ header{
   align-items: center;
   
 }
-header .login ,#logout{
+header .login ,.logout{
   color: white;
 }
+
 .middle-container-landing{
   background-image: url("https://i.imgur.com/8uXag5F.png");
 
