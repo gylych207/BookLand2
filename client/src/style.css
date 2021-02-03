@@ -6,6 +6,7 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  
 
 
  /* max-height: 1080px; */
@@ -31,10 +32,12 @@ header{
   justify-content: space-between;
   align-items: center;
   
+  
 }
 .header-container{
   max-width: 100%;
   overflow: hidden;
+
 }
 .name-logout{
   display: flex;
