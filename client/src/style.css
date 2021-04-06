@@ -1,4 +1,61 @@
+.rent-book{
+    margin: 8px !important;
+    width: 11% !important;
+}
+.rent-list{
+  display: flex;
+  width: 90%;
+  flex-wrap: wrap; 
+}
 
+.overall-rating{
+  display: flex;
+}
+.rent-delete:hover {
+  color: #ccc;
+  cursor: pointer;
+  opacity: 0.8;
+}
+.profile-due{
+  margin-top: -5px;
+}
+.react-stars{
+  margin: 30px 10px;
+}
+.shoping_cart{
+  margin-left: 30% !important;
+  margin-top: 5% !important;
+  height: 55%;
+}
+.react-datepicker-wrapper {
+  display: block;
+  margin-top: 5px;
+  width: -webkit-fill-available;
+}
+
+.form-select{
+  display: block;
+  width: 100%;
+  padding: .375rem 2.25rem .375rem .75rem;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #212529;
+  background-color: #fff;
+  background-image: url(data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23343a40' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M2 5l6 6 6-6'/%3e%3c/svg%3e);
+  background-repeat: no-repeat;
+  background-position: right .75rem center;
+  background-size: 16px 12px;
+  border: 1px solid #ced4da;
+  border-radius: .25rem;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+.filters{
+  width: 25%;
+  margin-right: 10%;
+}
 .layout-container{
   background-image: url("https://i.imgur.com/7PIJ7qh.jpeg");
   width: 100vw;
@@ -48,6 +105,7 @@ header{
 
 }
 .name{
+  margin-right: 10px;
   color:white;
   border: 3px solid white;
   padding: 9px;
@@ -158,6 +216,7 @@ display:flex;
   overflow: scroll;
  
 }
+
 .list-container > div {
   margin:20px;  /* and that, will result in a 10px gap */
 }
@@ -762,6 +821,7 @@ h2.active {
   height: 100vh;
 }
 .card{
+  display: flex;
   height:100vh;
 }
 @media (max-width: 600px) {

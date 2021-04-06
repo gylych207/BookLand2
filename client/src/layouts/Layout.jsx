@@ -9,7 +9,8 @@ export default function Layout(props) {
         {currentUser ? (
           <>
             <div className='name-logout'>
-              <p className='name'>Welcome {currentUser.name}</p>
+            <Link to='/profile' ><span className='name'>Welcome {currentUser.name}</span></Link>
+            
             <Link to='/' ><span onClick={handleLogout} className='logout'>Logout</span></Link>
             </div>
             <Link to='/'><img src="https://i.imgur.com/DQFRxfk.png" alt='' id='logo' /></Link>
