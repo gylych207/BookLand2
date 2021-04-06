@@ -49,17 +49,16 @@ class BooksController < ApplicationController
 
   def filters
     books = Book.all
-    
     books = books.where('title ILIKE ?', book_params[:title]) if book_params[:title].present?
     books = books.where('condition ILIKE ?', book_params[:condition]) if book_params[:condition].present?
     books = books.where('author_name ILIKE ?', book_params[:author_name]) if book_params[:author_name].present?
 
     if params["book"][:price_to].present? && params["book"][:price_from].present?
-      expenses = books.where('price BETWEEN ? AND ?', params["book"][:price_from], params["book"][:price_to])
+      books = books.where('price BETWEEN ? AND ?', params["book"][:price_from], params["book"][:price_to])
     elsif params["book"][:price_from].present?
       books = books.where('price >= ?', params["book"][:price_from])  
     elsif params["book"][:price_to].present?
-      books = books.where('created_at <= ?', params[:to_date]) 
+      books = books.where('price >= ?', params["book"][:price_from]) 
     end
     render json: books
   end
