@@ -1,6 +1,5 @@
 import React , { useState }from 'react';
-import { Link, useParams } from 'react-router-dom';
-import { useHistory } from "react-router-dom";
+import { useParams } from 'react-router-dom';
 
 const ShoppingCard = (props) => {
   const { id } = useParams();

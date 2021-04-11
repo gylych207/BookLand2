@@ -13,7 +13,6 @@ import { getAllBooks, postBook, deleteBook, putBook, filterBook, rentCreate, ren
 
 export default function MainContainer(props) {
   const [books, setBooks] = useState([]);
-  const [bookData,setBookData] = useState([]);
   const [categories, setCategories] = useState([]);
   const [rentData, setRentData] = useState([])
   const history = useHistory();

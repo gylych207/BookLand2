@@ -10,9 +10,7 @@ const BookInfo = (props) => {
   const [book, setBook] = useState(null);
   const { id } = useParams();
   const { handleDelete } = props;
-  const { setBookData } = props;
 
-  const rating = parseInt(book?.rating, 10)
   
 
   useEffect(() => {

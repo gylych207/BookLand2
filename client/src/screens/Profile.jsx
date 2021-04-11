@@ -1,7 +1,4 @@
 import React from 'react';
-import { useEffect, useState } from 'react';
-import { useParams,Link } from 'react-router-dom';
-import { getRentedBooks } from '../services/books';
 import ReactStars from "react-rating-stars-component";
 
 

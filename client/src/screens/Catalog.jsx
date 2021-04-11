@@ -1,7 +1,5 @@
 import React, { useState }from 'react';
 import { Link } from 'react-router-dom';
-import { useHistory } from "react-router-dom"
-
 export default function Catalog(props) {
   const { books} = props;
   const {handleFilters} = props;
@@ -12,9 +10,8 @@ export default function Catalog(props) {
     price_to: '',
     author_name:''
   })
-  const history = useHistory();
 
-  const {title, condition, price_to, price_from, author_name} = formData;
+  const {title, price_to, price_from, author_name} = formData;
   const handleChange = (e) => {
     
     const { name, value } = e.target;
