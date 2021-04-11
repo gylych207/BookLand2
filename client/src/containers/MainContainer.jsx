@@ -44,7 +44,7 @@ export default function MainContainer(props) {
     }
     isAuthenticated();
     fetchCategories();
-  }, []);
+  },[]);
   
   
   const handleCreate = async (bookData) => {
@@ -138,7 +138,7 @@ export default function MainContainer(props) {
         rentData = {rentData}
         handleBookRating = {handleBookRating}      
         />
-        }
+        
       </Route>
     </Switch>
   )
