@@ -33,6 +33,7 @@ export default function Login(props) {
       <label>Username:
         <input
           type='text'
+          placeholder="User Name"
               name='username'
               className='fadeIn second login tex'
           value={username}
@@ -42,9 +43,10 @@ export default function Login(props) {
       <br />
       <label>Password:
         <input
+          placeholder="Password"
           type='password'
               name='password'
-              className='fadeIn third password tex'
+              className='fadeIn third login tex'
           value={password}
           onChange={handleChange}
         />

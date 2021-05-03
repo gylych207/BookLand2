@@ -6,14 +6,15 @@ import BookInfo from "../screens/BookInfo.jsx";
 import Customize from "../screens/Customize.jsx";
 import SellYourBook from "../screens/SellYourBook.jsx";
 import ShoppingCard from "../screens/ShoppingCard.jsx"
+import Profile from "../screens/Profile"
 import { getAllCategories} from "../services/categories.js";
-import { getAllBooks, postBook, deleteBook, putBook } from "../services/books.js";
+import { getAllBooks, postBook, deleteBook, putBook, filterBook, rentCreate, rentBookDelete, getRentedBooks, updateRating } from "../services/books.js";
 
 
 export default function MainContainer(props) {
   const [books, setBooks] = useState([]);
-  const [bookData,setBookData] = useState([]);
   const [categories, setCategories] = useState([]);
+  const [rentData, setRentData] = useState([])
   const history = useHistory();
   const { currentUser } = props;
   
@@ -22,6 +23,11 @@ export default function MainContainer(props) {
       const bookData = await getAllBooks();
       setBooks(bookData)
     }
+    const rentBook = async () => {
+      const rentData = await getRentedBooks(1);
+      setRentData(rentData);
+    }
+    rentBook()
     fetchBooks();
   }, []);
 
@@ -31,8 +37,14 @@ export default function MainContainer(props) {
       const categoryData = await getAllCategories();
       setCategories(categoryData)
     }
+    const isAuthenticated = ()=>{
+      if (currentUser == null){
+        history.push('/login')
+      }
+    }
+    isAuthenticated();
     fetchCategories();
-  }, []);
+  },[]);
   
   
   const handleCreate = async (bookData) => {
@@ -55,6 +67,27 @@ export default function MainContainer(props) {
     history.push('/books')
   }
 
+  const handleFilters = async(filterData) =>{
+    const books = await filterBook(filterData);
+    setBooks(books)
+  }
+  const handleRentCreate = async(id, rentData) => {
+    const books = await rentCreate(id, rentData);
+    setRentData(books);
+    history.push('/profile')
+  }
+
+  
+  const handleRentBookDelete = async(id)=>{
+    const data = await rentBookDelete(id);
+    setRentData(data);
+  }
+  const handleBookRating = async(id, rating)=>{
+    const data = await updateRating(id, rating);
+    setRentData(data);
+  }
+  
+
   return (
     <Switch>
         <Route exact path='/books'>
@@ -62,6 +95,7 @@ export default function MainContainer(props) {
           books={books}
           handleDelete={handleDelete}
           currentUser={currentUser}
+          handleFilters = {handleFilters}
         />
       </Route>
       <Route path='/sellYourBook'>
@@ -74,7 +108,6 @@ export default function MainContainer(props) {
         <BookInfo
           books={books}
           handleDelete={handleDelete}
-          setBookData={setBookData}
         />
       </Route>
       <Route path='/books/:id/edit'>
@@ -89,15 +122,23 @@ export default function MainContainer(props) {
           handleCreate={handleCreate}
         />
       </Route>
-      <Route path='/shoppingCard'>
+      <Route path='/books/:id/rents'>
         <ShoppingCard
-         bookData={bookData}
+         handleRentCreate={handleRentCreate}
         />
       </Route>
       <Route exact path='/'>
         <Landing
           
         />
+      </Route>
+       <Route exact path='/profile'>
+        <Profile
+        handleRentBookDelete={handleRentBookDelete}  
+        rentData = {rentData}
+        handleBookRating = {handleBookRating}      
+        />
+        
       </Route>
     </Switch>
   )

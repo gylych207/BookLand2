@@ -30,6 +30,7 @@ export default function Register(props) {
       <label>Username:
         <input
           type='text'
+          placeholder="User Name"
                 name='name'
                 className='fadeIn second login tex'
           value={name}
@@ -39,6 +40,7 @@ export default function Register(props) {
     
       <label>Email:
         <input
+          placeholder="Email"
           type='text'
                 name='email'
                 className='fadeIn second login tex'
@@ -49,9 +51,10 @@ export default function Register(props) {
     
       <label>Password:
         <input
+          placeholder="Password"
           type='password'
                 name='password'
-                className='fadeIn third password tex'
+                className='fadeIn third login tex'
           value={password}
           onChange={handleChange}
         />

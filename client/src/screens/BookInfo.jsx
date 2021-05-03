@@ -2,6 +2,7 @@ import React from 'react';
 import { useEffect, useState } from 'react';
 import { useParams,Link } from 'react-router-dom';
 import { getOneBook } from '../services/books';
+import ReactStars from "react-rating-stars-component";
 
 
 
@@ -9,7 +10,7 @@ const BookInfo = (props) => {
   const [book, setBook] = useState(null);
   const { id } = useParams();
   const { handleDelete } = props;
-  const { setBookData } = props;
+
   
 
   useEffect(() => {
@@ -39,7 +40,6 @@ const BookInfo = (props) => {
               <p><span>ISBN: </span>{book?.isbn}</p>
               <p><span>Rental Price: </span> {book?.price}$</p>
               <p><span>Author: </span>{book?.author_name}</p>
-              <p><span>Category: </span>{book?.category.name}</p>
              
             </div>
             <div className='right-lower-inner-container'>
@@ -49,12 +49,24 @@ const BookInfo = (props) => {
   
         </div>
         <div className='info-right-container'>
+          <div className='ad overall-rating'>
+          <h3> Book Overall Rating: {book?.rating}</h3>
+            
+            <ReactStars
+              className="due"
+              value={1}
+              edit={false}
+              count={1}
+              size={24}
+              activeColor="#ffd700"
+            />
+            </div>
           <div className='ad'>
             <p>Free 2 Day Shipping</p>
             <p>Arrive 01.05.2021</p>
           </div>
           <div className='btn-rent'>
-            <Link to='/shoppingCard' onClick={()=>setBookData(book)}><p>RENT</p></Link>
+            <Link to={`/books/${id}/rents`}><p>RENT</p></Link>
           </div>
         </div>
       </div>
