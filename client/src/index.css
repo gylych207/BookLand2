@@ -1,0 +1,18 @@
+body {
+    /* margin top added 0 to 65px*/
+  /* margin-top: 65px; */
+  margin-top: 0px;
+  height:100vh;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  max-width:100vw;
+  width:100vw;
+  
+  /*  overflow to overflow-x hidden */
+  overflow-x: hidden;
+ 
+}
+
